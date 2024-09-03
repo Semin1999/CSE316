@@ -24,10 +24,11 @@
 
     # Ordered List / Unordered List
     <ol></ol> Ordered List
-        type = "1" : 숫자 (기본값) / "a" : 영어 소문자 / "A" : 영어 대문자 / "i" : 로마 숫자 소문자 / "I" : 로마 숫자 대문자
+        style = "list-style-type: upper-roman" = "1" : 숫자 (기본값) / "a" : 영어 소문자 / "A" : 영어 대문자 / "i" : 로마 숫자 소문자 / "I" : 로마 숫자 대문자
         start = "3" : 숫자 3부터 시작
 
     <ul></ul> Unordered List
+    <li> list item
 
     <dl> description List
         <dt></dt> description term
@@ -40,14 +41,61 @@
         <p> Get <b>Start</b> with some <i>Terminology!</i> </p>
     </header>
 
-    <div class = "terminology">
-        <p>
-            Do you know What is the difference between b and strong?
+    <p class = "terminology">
+        <div>
+            Do you know What is the difference between 'b' and 'strong'?
             <br>
-            Those two are same with apply to 
-        </p>
-    </div>
+               <b>'b'</b>: Makes text bold for styling only.
+            <br>
+               <strong>'strong'</strong>: Makes text bold and indicates that it is important, affecting search engines and accessibility tools.
+        </div> 
+    </p>
 
+    <hr> <!-- Horizontal Line-->
+
+    <p class = "list">
+        <h3>Ordered List</h3>
+        <ol style = "list-style-type: decimal" start="0">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Soda</li>
+            <li>Milk</li>
+        </ol>
+
+        <h3>UnOrdered List</h3>
+        <uo>
+            <li>Hambuger</li>
+            <li>Chicken</li>
+            <li>Cookie</li>
+            <li>Pizza</li>
+        </uo>
+
+        <h3>Description List</h3>
+        <dl>
+            <dt>Kinds of List</dt>
+            <dd>Ordered List : ol</dd>
+            <dd>UnOrdered List : ul</dd>
+            <dd>Description List : dl</dd>
+        </dl>
+    </p>
+
+    <hr>
+
+    <!-- 
+        Table : <table></table>
+        table Head : <thead></thead> 
+        table row : <tr></tr>
+        table column : <td></td>
+https://e-you.tistory.com/150
+    
+    -->
+    <p class = "table">
+        <table>
+
+        </table>    
+    </p>
+
+    
 
 </body>
 
