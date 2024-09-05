@@ -1,0 +1,151 @@
+
+/* Basic selectors */
+/* -Tag, id, class */
+/* attribute, attribute/value */
+
+
+p {
+  color:rgb(5, 5, 240);
+}
+
+.bigText {
+  color: green;
+  background-color: pink;
+}
+
+[href] {
+  color: purple;
+  font-size:  28px;
+  font-weight: bold;
+}
+
+#veryspecial {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: blueviolet;
+  /* color: blueviolet; */
+  font-size: 42px;
+  background-color: #eeeeee
+}
+
+ul {
+  border: 5px solid green;
+  padding: 60px 20px;
+  border-radius: 5px;
+}
+
+ul li{ /*list item in unordered item*/
+  color:red;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+ol li{ /*list item in ordered item*/
+  color: green;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+li{
+  border: 2px solid black;
+  list-style-position: inside;
+  margin-left: 100px; /*outside of border*/
+  padding-left: 20px; /*inside of border*/
+}
+
+ol + li{
+  /*
+  sibling of ordered list which is orderedlist will effect 
+  so if I li + li, the all list item without first item will be effect
+  */
+}
+ 
+ul ~p {
+  /*
+  all the paragraph after the unordered list
+  */
+  font-size: 9px;
+}
+
+/* #specialSection :first-child {
+  color: rgb(0, 255, 221);
+  font-size: 24px;
+} */
+/* 
+#specialSection p:first-of-type {
+  color: rgb(167, 98, 161);
+  font-size: 24px;
+} */
+
+.openp::first-letter{
+  font-size: 30px;
+  color: green;
+}
+
+/*
+링크에서 클릭 관련 하는것 
+  link: 맨 처음 링크
+  visited: 들어간 페이지
+  hover: 마우스 오린거
+  active: 마우스 클릭 하고 있을때
+*/
+a:link{
+  color: green;
+}
+
+a:visited{
+  color:blueviolet;
+}
+
+a:hover{
+  color:red;
+  font-size: 40px;
+}
+
+a:active{
+  color:skyblue;
+}
+
+
+
+/* Relational eelectors */
+/* space, +, ~ */
+
+/*
+ margin = outside, padding = inside 
+  there is relative size
+
+  Relative:
+  em - Relative to parent font size
+  rem - Relative to root font size
+
+
+
+*/
+
+/* Psuedo-class and Psuedo-element selectors *
+ /* ':' first-child, first-of-type, 
+ links - link, focus, hover, visited
+  */
+
+
+  /* '::' first-letter, first-line, selection,  */
+  /* before, after */
+
+  /* Application of rules  */
+  /* Specificity => id, class&attrib, element */
+
+  /* inheritance - Usually typography styles */
+
+  /* colors
+    named, rgb, hsl, hex */
+
+/* gradients (linear, radial) */
+
+/* borders */
+/* values are width, style, color */
+
+
+/* shadows [box, text] */
+
+  
