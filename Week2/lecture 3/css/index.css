@@ -106,6 +106,30 @@ a:active{
   color:skyblue;
 }
 
+/*
+div p {
+  all the dicendents of a type div
+}
+*/
+
+/*
+div > p {
+  only one level child of paragraph with div
+}
+*/
+
+/*
+div > p {
+  after sibiling paragraph directly after (1st bilingO a div
+}
+*/
+
+/*
+div ~ p {
+  after paragraph after that div
+}
+*/
+
 
 
 /* Relational eelectors */
