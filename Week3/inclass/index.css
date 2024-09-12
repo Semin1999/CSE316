@@ -1,0 +1,38 @@
+
+/* Basic selectors */
+/* -Tag, id, class */
+/* attribute, attribute/value */
+
+
+
+/* Relational eelectors */
+/* space, +, ~ */
+
+
+
+/* Psuedo-class and Psuedo-element selectors *
+ /* ':' first-child, first-of-type, 
+ links - link, focus, hover, visited
+  */
+
+
+  /* '::' first-letter, first-line, selection,  */
+  /* before, after */
+
+  /* Application of rules  */
+  /* Specificity => id, class&attrib, element */
+
+  /* inheritance - Usually typography styles */
+
+  /* colors
+    named, rgp, hsl, hex */
+
+/* gradients (linear, radial) */
+
+/* borders */
+/* values are width, style, color */
+
+
+/* shadows [box, text] */
+
+  
