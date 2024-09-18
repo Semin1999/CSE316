@@ -101,11 +101,15 @@ nav a:hover{
 
 /* The First Home Button assigned */
 #Home{
-    margin-right: auto;
-    padding-left: 200px;
-    padding-right: 200px;
-}
+  background-image: url(../AssignImages/HomeIcon.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
 
+  margin-right: auto;
+  padding-left: 200px;
+  padding-right: 200px;
+}
 /* Want to make same color when its click after */
 nav ul li a:focus  {
     background-color: rgb(236, 226, 236);
