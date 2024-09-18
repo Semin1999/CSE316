@@ -2,6 +2,9 @@
 Name: Semin Bae (114730530)
 SBU-Email: semin.bae@stonybrook.edu 
 */
+
+
+/* Basic Assign */
 *{
     margin: 0;
     padding: 0;
@@ -16,11 +19,9 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-/* nav{
-    background-color: white;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-} */
 
+
+/* -- Navigator Area -- */
 nav ul{
     width: 100%;
     margin-top: 30px;
@@ -44,13 +45,50 @@ nav a{
     color: black;
 }
 
+/* -- Drop Down -- */
+.dropbtn {
+    background-color: rgb(236, 226, 236);
+    color: black;
+    height: 100%;
+    padding: 0 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #d1d1d1;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebebebe7;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 10;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 20px 25px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddddddf3;}
+  
+  .show {display: block;}
+/*-----*/
+
 nav a:hover{
     background-color: #f0f0f0;
 }
 
-
-
-nav li:last-child{
+/* The last MyInfo Assigned */
+#MyInfo{
     margin-left: auto;
     padding-right: 200px;
     padding-left: 200px;
@@ -60,29 +98,15 @@ nav li:last-child{
     background-position: center;
 }
 
-nav ul li a:focus  {
-    background-color: rgb(236, 226, 236);
-  }
-
-nav li:first-child{
+/* The First Home Button assigned */
+#Home{
     margin-right: auto;
     padding-left: 200px;
     padding-right: 200px;
 }
 
-.mainText{
-    margin-left: 250px;
-}
-
-.mainTitle{
-    font-size: 60px;
-    font-weight: 550;
-}
-
-.explainTitle{
-    margin-left: 20px;
-}
-
-.explainText{
-    margin-left: 45px;
-}
+/* Want to make same color when its click after */
+nav ul li a:focus  {
+    background-color: rgb(236, 226, 236);
+  }
+/* -- Navigator Area -- */
