@@ -5,6 +5,7 @@ SBU-Email: semin.bae@stonybrook.edu
 
 
 /* Basic Assign */
+
 *{
     margin: 0;
     padding: 0;
@@ -21,7 +22,7 @@ body{
 
 
 
-/* -- Navigator Area -- */
+/* -- Navigator START -- */
 nav ul{
     width: 100%;
     margin-top: 30px;
@@ -109,4 +110,4 @@ nav a:hover{
 nav ul li a:focus  {
     background-color: rgb(236, 226, 236);
   }
-/* -- Navigator Area -- */
+/* -- NAVITAGOR END -- */
