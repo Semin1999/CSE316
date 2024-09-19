@@ -1,0 +1,167 @@
+/*
+Name: Semin Bae (114730530)
+SBU-Email: semin.bae@stonybrook.edu 
+*/
+
+
+/* Basic Assign */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color: rgb(236, 226, 236);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+
+/* -- Navigator START -- */
+nav ul{
+    width: 100%;
+    margin-top: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 100px;
+    margin:auto;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+/* -- Drop Down -- */
+.dropbtn {
+    background-color: rgb(236, 226, 236);
+    color: black;
+    height: 100%;
+    padding: 0 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #d1d1d1;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebebebe7;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 10;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 20px 25px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddddddf3;}
+  
+  .show {display: block;}
+/*-----*/
+
+nav a:hover{
+    background-color: #f0f0f0;
+}
+
+/* The last MyInfo Assigned */
+#MyInfo{
+    margin-left: auto;
+    padding-right: 200px;
+    padding-left: 200px;
+    background-image: url(../AssignImages/user.png);
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* The First Home Button assigned */
+#Home{
+  background-image: url(../AssignImages/HomeIcon.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-right: auto;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+/* Want to make same color when its click after */
+nav ul li a:focus  {
+    background-color: rgb(236, 226, 236);
+  }
+/* -- NAVITAGOR END -- */
+
+ul.list {
+  display: flex;
+  flex-wrap: wrap; 
+  list-style-type: none; 
+}
+
+.listElement {
+  display: flex;
+  align-items: flex-start; 
+  margin: 20px;
+  width: 700px;
+}
+
+.listImage {
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+}
+
+.listName {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.listExplain {
+  margin-bottom: 5px;
+}
+
+.peopleInfo, .locationInfo, .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.twoPeople, .locate, .information {
+  width: 20px; 
+  height: 20px; 
+  margin-right: 10px; 
+}

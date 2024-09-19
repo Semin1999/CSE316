@@ -28,4 +28,3 @@ function dropdownFunction() {
     }
   }
   /* -- NAVIGATOR END -- */
-  
