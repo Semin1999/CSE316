@@ -36,13 +36,35 @@ SBU-Email: semin.bae@stonybrook.edu
 
 
     <!-- NAVITAGOR END -->
-    <select id="dropdown"></select>
+    <main>
 
-    <ul class="list"></ul>
-    <input type="date" max="2030-12-31" min="2023-01-01" value="2023-01-01" id = "date">
-    <input type="number" max = "999" min = 0 id= "number">
-    <input type="checkbox" id="check">
-    <textarea id="comments" rows="3" cols="30" placeholder="Please Type here..."></textarea>
+        <select id="dropdown"></select>
+
+        <ul class="list"></ul>
+    
+        <h3 id="dateCover">Date to be used: <input type="date" max="2030-12-31" min="2021-01-01" id="date"></h3>
+        
+        <h3 id = "numberCover">Number of People: <input type="number" max = "999" min = 0 id = "number"></h3>
+        
+
+        <h3>Are you affiliated with SUNY Korea?</h3>
+        <nav id = "affiliated">  
+        <input type="radio" sytle = "round" class = "circle" id = 'yes'> Yes
+        <br>
+        <input type="radio" sytle = "round" class = "circle" id = 'no'> No
+        </nav>
+    
+        <br>
+    
+        <h3 id = "purposeCover">Purpose of Use:</h3>
+    
+        <textarea rows="3" cols="30" placeholder="Please Type here..." id = "purpose"></textarea>
+    
+        <br>
+    
+        <button id = "submit">Submit</button>
+
+    </main>
     
 </body>
 </html>

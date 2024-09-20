@@ -7,9 +7,9 @@ SBU-Email: semin.bae@stonybrook.edu
 function dropdownFunction() {
 
     document.getElementById("myDropdown").classList.toggle("show");
-  }
+}
   
-  window.onclick = function(event) {
+window.onclick = function(event) {
       
     if (!event.target.matches('.dropbtn')) {
       
@@ -26,10 +26,122 @@ function dropdownFunction() {
       
       }
     }
-  }
-  /* -- NAVIGATOR END -- */
+}
 
-  const items = [
+/* -- NAVIGATOR END -- */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.getElementById('dropdown');
+    const button = document.getElementById('submit');
+    const yes = document.getElementById('yes');
+    const no = document.getElementById('no');
+
+    // 버튼 클릭 시 제출 함수 실행
+    button.onclick = onHitSubmit;
+
+    // 드롭다운 항목 추가
+    items.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item.name;
+        option.textContent = item.name;
+        dropdown.appendChild(option);
+    });
+
+    // 드롭다운 변화 이벤트
+    dropdown.addEventListener('change', () => handleDropdownChange(dropdown));
+
+    yes.addEventListener('change', () => {
+        no.checked = false;
+    });
+    no.addEventListener('change', () => {
+        yes.checked = false;
+    });
+    
+    // 페이지 로드 시 첫 번째 항목으로 리스트 초기화
+    updateList(items[0]);
+});
+
+// 리스트 업데이트 함수
+const updateList = (item) => {
+    const list = document.querySelector('.list');
+    list.innerHTML = ''; // 리스트 초기화
+
+    const listElement = document.createElement('li');
+    listElement.className = 'listElement';
+
+    listElement.innerHTML = `
+        <img src="${item.img}" class="listImage">
+        <div class="description">
+            <b class="listName">${item.name}</b>
+            <span class="listExplain">${item.explain}</span>
+            <div class="peopleInfo">
+                <img src="../AssignImages/twoPeople.png" class="twoPeople">
+                <span>${item.people}</span>
+            </div>
+            <div class="locationInfo">
+                <img src="../AssignImages/locate.png" class="locate">
+                <span>${item.location}</span>
+            </div>
+            <div class="info">
+                <img src="../AssignImages/information.png" class="information">
+                <span>${item.info}</span>
+            </div>
+        </div>
+    `;
+
+    list.appendChild(listElement); // 리스트에 추가
+};
+
+function onHitSubmit() {
+    const dropdown = document.getElementById('dropdown');
+    const selectedItemName = dropdown.value;
+    const selectedItem = items.find(item => item.name === selectedItemName);
+
+    if (selectedItem) {
+        const maxPeople = selectedItem.people;
+        const purpose = document.getElementById('purpose').value;
+        const number = document.getElementById('number').value;
+        const dateInput = document.getElementById('date').value; // 입력된 날짜 문자열
+        const currDate = new Date(); // 현재 날짜
+        const yes = document.getElementById('yes');
+
+        // 인원 수 체크
+        if (number && number > maxPeople) {
+            alert("Cannot reserve: exceeds maximum number of people");
+        } 
+        // 날짜 체크
+        else if (dateInput) {
+            const inputDate = new Date(dateInput);
+            if (inputDate < currDate) {
+                alert("Cannot reserve: date is in the past");
+            }
+        }
+        // SUNY 체크 확인
+        else if (!yes.checked) {
+            alert("Cannot reserve: should check Yes on SUNY Korea student");
+        }
+        // 목적 확인
+        else if (purpose === "") {
+            alert("Cannot reserve: define the purpose of use");
+        } 
+        // 모든 체크가 통과했을 때 실행할 기능
+        else {
+
+        }
+    }    
+}
+
+// 드롭다운 변화 이벤트 처리 함수
+const handleDropdownChange = (dropdown) => {
+    const selectedItem = items.find(item => item.name === dropdown.value);
+    if (selectedItem) {
+        updateList(selectedItem); // 선택된 항목 업데이트
+    }
+};
+
+
+
+const items = [
     {
         img: "../AssignImages/gym.jpg",
         name: "Gym",
@@ -79,65 +191,3 @@ function dropdownFunction() {
         info: "Available to all"
     },
 ];
-
-document.addEventListener('DOMContentLoaded', () => {
-  const dateControl = document.querySelector('input[type="date"]');
-  const numberControl = document.querySelector('input[type="number"]');
-  const dropdown = document.getElementById('dropdown');
-  const list = document.querySelector('.list');
-
-  // 현재 날짜 설정
-  dateControl.value = new Date().toISOString().split('T')[0];
-
-  // 드롭다운 항목 추가
-  items.forEach(item => {
-      const option = document.createElement('option');
-      option.value = item.name;
-      option.textContent = item.name;
-      dropdown.appendChild(option);
-  });
-
-  // 드롭다운 변화에 따른 리스트 업데이트 함수
-  const updateList = (selectedItem) => {
-      while (list.firstChild) {
-          list.removeChild(list.firstChild);
-      }
-
-      const listElement = document.createElement('li');
-      listElement.className = 'listElement';
-
-      listElement.innerHTML = `
-          <img src="${selectedItem.img}" class="listImage">
-          <div class="description">
-              <b class="listName">${selectedItem.name}</b>
-              <span class="listExplain">${selectedItem.explain}</span>
-              <div class="peopleInfo">
-                  <img src="../AssignImages/twoPeople.png" class="twoPeople">
-                  <span class="twoPeopleText"><span class="twoPeopleNumber">${selectedItem.people}</span></span>
-              </div>
-              <div class="locationInfo">
-                  <img src="../AssignImages/locate.png" class="locate">
-                  <span class="locateText"><span class="locateInfo">${selectedItem.location}</span></span>
-              </div>
-              <div class="info">
-                  <img src="../AssignImages/information.png" class="information">
-                  <span class="informationText">${selectedItem.info}</span>
-              </div>
-          </div>
-      `;
-
-      list.appendChild(listElement);
-  };
-
-  // 드롭다운 변화 이벤트 리스너
-  dropdown.addEventListener('change', () => {
-      const selectedItem = items.find(item => item.name === dropdown.value);
-      if (selectedItem) {
-          updateList(selectedItem);
-      }
-  });
-
-  // 페이지 로드 시 첫 번째 항목의 리스트 업데이트
-  const initialItem = items[0];
-  updateList(initialItem);
-});
