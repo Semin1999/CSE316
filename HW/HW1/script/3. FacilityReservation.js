@@ -115,6 +115,26 @@ function onHitSubmit() {
             if (inputDate < currDate) {
                 alert("Cannot reserve: date is in the past");
             }
+            else {
+                alert("Successfully reserved!");
+            
+                const count = window.localStorage.length;
+
+                const reservedItem = {
+                    img: selectedItem.img,
+                    name: selectedItem.name,
+                    location: selectedItem.location,
+                    purpose: purpose,
+                    number: number,
+                    date: inputDate.toISOString().split('T')[0]
+                };
+            
+                window.localStorage.setItem(`reservedItem${count}`, JSON.stringify(reservedItem));
+            
+                const savedItem = JSON.parse(window.localStorage.getItem(`reservedItem${count}`));
+            
+                console.log(`saved!! ${savedItem.date} / ${savedItem.img} / ${savedItem.name} / ${savedItem.location} / ${savedItem.purpose} / ${savedItem.number}`);
+            }
         }
         // SUNY 체크 확인
         else if (!yes.checked) {
@@ -124,9 +144,8 @@ function onHitSubmit() {
         else if (purpose === "") {
             alert("Cannot reserve: define the purpose of use");
         } 
-        // 모든 체크가 통과했을 때 실행할 기능
-        else {
-
+        else{
+            alert("Cannot reserve: Should define the reservation date!");
         }
     }    
 }

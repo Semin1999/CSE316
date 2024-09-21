@@ -32,6 +32,69 @@ SBU-Email: semin.bae@stonybrook.edu
 
 
     <!-- NAVITAGOR END -->
+    <nav class = "textArea">
+        
+        <h3 id = "title">User Information</h3>
 
+        <br>
+
+        <image id = "userImage" src = "../AssignImages/user.png"></src>
+        
+        <br>
+
+        <button id = "buttonImage" class = buttonUnit>change image</button>
+        
+        <br>
+        
+        <nav id = "emailCover">Email:
+        <span id = "email">semin.bae@stonybrook.edu</span></nav>
+
+        <br>
+
+        <span class = "textUnit">Password: ******** </span>
+        <button id = "buttonPassword" class = buttonUnit>Change Password</button>
+
+        <br>
+
+        <span class = "textUnit">Name: Semin Bae </span>
+        <button id = "buttonName" class = "buttonUnit">Change Name</button>
+    </nav>
+
+    <div class="popup">
+
+        <div class="image_popup">
+            <h3 class = "popup_title">Change your image</h3>
+            <hr>
+            <p class = "popup_explain">New Image</p>
+            
+
+            <input type="file" id="userAvatar" accept="image/png, image/jpeg" />
+
+
+            <hr>
+            <div class="btn_footer">
+                <button type="button" class="close_btn">Close</button>
+                <button type="button" class="save_btn">Save Changes</button>
+            </div>
+        </div>
+
+        <div class="password_popup">
+            <h3 class = "popup_title">Change your password</h3>
+            <hr>
+            <p class = "popup_explain">New Password</p>
+            
+            <input type="text" id="passwordText" placeholder = "Enter the new password"/>
+
+
+            <hr>
+            <div class="btn_footer">
+                <button type="button" class="close_btn">Close</button>
+                <button type="button" class="save_btn">Save Changes</button>
+            </div>
+        </div>
+
+
+    </div>
+    
 </body>
 </html>

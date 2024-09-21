@@ -143,6 +143,7 @@ ul.list {
   flex-direction: column;
   justify-content: center;
   height: 200px;
+  font-size: 18px;
 }
 
 .listName {

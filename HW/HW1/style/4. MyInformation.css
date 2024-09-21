@@ -115,3 +115,134 @@ nav ul li a:focus  {
     background-color: rgb(236, 226, 236);
   }
 /* -- NAVITAGOR END -- */
+
+/* -- MODAL POPUP START --  */
+
+.popup {
+  font-size: 1.2rem;
+}
+
+.popup .image_popup {
+  display: none;
+  position: absolute;
+  width: 80%;
+  max-width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2vh 2vw;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.popup .password_popup {
+  display: none;
+  position: absolute;
+  width: 80%;
+  max-width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2vh 2vw;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.popup .password_popup #passwordText {
+  width:100%;
+  font-size: 1.3rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-bottom: 3%;
+}
+
+
+
+.popup .popup_title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2vh;
+  margin-top: 1vh;
+}
+
+.popup_explain {
+  margin-top: 1.5vh;
+  margin-bottom: 1vh;
+}
+
+.btn_footer {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: 2vh; 
+}
+
+.close_btn, .save_btn {
+  height: 5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  border-radius: 7px;
+  border-width: 0;
+  color: white;
+  margin-left: 1vw;
+  font-size: 1rem;
+}
+
+.close_btn {
+  background-color: grey;
+}
+
+.save_btn {
+  background-color: rgb(61, 139, 255);
+}
+
+.close_btn:active, .save_btn:active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+#userAvatar {
+  padding-bottom: 1.5vh;
+  font-size: 1.1rem;
+}
+
+/* -- MODAL POPUP END--  */
+
+.textArea {
+  text-align: center;
+  font-size: 1rem;
+}
+
+#title {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+#userImage {
+  width: 30vw;
+  max-width: 250px;
+  height: auto;
+}
+
+.buttonUnit {
+  height: 5vh;
+  background-color: rgb(236, 226, 236);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.1s, color 0.1s;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.buttonUnit:active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-color: grey;
+  border-width: 2px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#emailCover {
+  padding-top: 1.5vh;
+}
