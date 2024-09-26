@@ -3,9 +3,9 @@ Name: Semin Bae (114730530)
 SBU-Email: semin.bae@stonybrook.edu 
 */
 
+/* -- Navigator CSS -- */
 
 /* Basic Assign */
-
 *{
     margin: 0;
     padding: 0;
@@ -20,8 +20,6 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-
-
 /* -- Navigator START -- */
 nav ul{
     width: 100%;
@@ -30,11 +28,13 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
 }
 
 nav li{
     height: 100px;
-    margin:auto;
+    margin: auto;
+    height: 60px;
 }
 
 nav a{
@@ -46,7 +46,19 @@ nav a{
     color: black;
 }
 
-/* -- Drop Down -- */
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a:hover{
+  background-color: #d1d1d1;
+}
+
+/* -- NAV: Drop Down -- */
 .dropbtn {
     background-color: rgb(236, 226, 236);
     color: black;
@@ -79,24 +91,17 @@ nav a{
     display: block;
   }
   
-  .dropdown a:hover {background-color: #ddddddf3;}
-  
   .show {display: block;}
 /*-----*/
 
-nav a:hover{
-    background-color: #f0f0f0;
-}
-
 /* The last MyInfo Assigned */
 #MyInfo{
-    margin-left: auto;
-    padding-right: 200px;
-    padding-left: 200px;
     background-image: url(../AssignImages/user.png);
     background-size: 60px;
     background-repeat: no-repeat;
     background-position: center;
+    width: 60px;
+    margin-right: 2%;
 }
 
 /* The First Home Button assigned */
@@ -105,13 +110,81 @@ nav a:hover{
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: center;
-
-  margin-right: auto;
-  padding-left: 200px;
-  padding-right: 200px;
+  margin-left: 2%;
+  width: 60px
 }
-/* Want to make same color when its click after */
-nav ul li a:focus  {
-    background-color: rgb(236, 226, 236);
+
+/* The Hambuger btn assigned */
+#ExpandHambuger{
+  background-image: url(../AssignImages/Threeline.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  margin-right: 2%;
+}
+
+/* --- HAMBUGER START --- */
+#hambuger{
+  display: none;
+}
+
+.hambugerlist{
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:80%;
+  margin:auto;
+}
+
+#myDropdownMobile{
+  display: none;
+}
+
+.hambugerlist:hover, .hambugerlist:focus {
+  background-color: #d1d1d1;
+}
+
+.mobiledropdown{
+  padding: 20px 25px;
+  display: block;
+  width: 30%;
+  text-align: center;
+  margin-left:10%;
+  background-color: #f0f0f0;
+}
+
+/* Dynamic sizing for screen size */
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
   }
-/* -- NAVITAGOR END -- */
+  .hideOnWeb{
+    display: block;
+  }
+}
+
+@media(min-width: 800px){
+  .hideOnMobile{
+    display: block;
+  }
+  .hideOnWeb{
+    display: none;
+  }
+  .hambugers{
+    display:none;
+  }
+}
+
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+
+
+/** -- NAVIGATOR CSS -- **/

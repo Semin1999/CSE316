@@ -3,119 +3,191 @@ Name: Semin Bae (114730530)
 SBU-Email: semin.bae@stonybrook.edu 
 */
 
+/* -- Navigator CSS -- */
 
 /* Basic Assign */
-
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body{
-    min-height: 100vh;
-    background-color: rgb(236, 226, 236);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  min-height: 100vh;
+  background-color: rgb(236, 226, 236);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-
-
 
 /* -- Navigator START -- */
 nav ul{
-    width: 100%;
-    margin-top: 30px;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
 }
 
 nav li{
-    height: 100px;
-    margin:auto;
+  height: 100px;
+  margin: auto;
+  height: 60px;
 }
 
 nav a{
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
 }
 
-/* -- Drop Down -- */
-.dropbtn {
-    background-color: rgb(236, 226, 236);
-    color: black;
-    height: 100%;
-    padding: 0 30px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #d1d1d1;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ebebebe7;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    right: 10;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 20px 25px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown a:hover {background-color: #ddddddf3;}
-  
-  .show {display: block;}
-/*-----*/
+nav ul{
+width: 100%;
+list-style: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
 
 nav a:hover{
-    background-color: #f0f0f0;
+background-color: #d1d1d1;
 }
+
+/* -- NAV: Drop Down -- */
+.dropbtn {
+  background-color: rgb(236, 226, 236);
+  color: black;
+  height: 100%;
+  padding: 0 30px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #d1d1d1;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ebebebe7;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 10;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 20px 25px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display: block;}
+/*-----*/
 
 /* The last MyInfo Assigned */
 #MyInfo{
-    margin-left: auto;
-    padding-right: 200px;
-    padding-left: 200px;
-    background-image: url(../AssignImages/user.png);
-    background-size: 60px;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url(../AssignImages/user.png);
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  margin-right: 2%;
 }
 
 /* The First Home Button assigned */
 #Home{
-  background-image: url(../AssignImages/HomeIcon.png);
-  background-size: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  margin-right: auto;
-  padding-left: 200px;
-  padding-right: 200px;
+background-image: url(../AssignImages/HomeIcon.png);
+background-size: 30px;
+background-repeat: no-repeat;
+background-position: center;
+margin-left: 2%;
+width: 60px
 }
-/* Want to make same color when its click after */
-nav ul li a:focus  {
-    background-color: rgb(236, 226, 236);
-  }
-/* -- NAVITAGOR END -- */
 
+/* The Hambuger btn assigned */
+#ExpandHambuger{
+background-image: url(../AssignImages/Threeline.png);
+background-size: 30px;
+background-repeat: no-repeat;
+background-position: center;
+width: 60px;
+margin-right: 2%;
+}
+
+/* --- HAMBUGER START --- */
+#hambuger{
+display: none;
+}
+
+.hambugerlist{
+display: block;
+margin-bottom: 10px;
+text-align: center;
+padding: 15px;
+margin-top: 10px;
+margin-bottom: 10px;
+width:80%;
+margin:auto;
+}
+
+#myDropdownMobile{
+display: none;
+}
+
+.hambugerlist:hover, .hambugerlist:focus {
+background-color: #d1d1d1;
+}
+
+.mobiledropdown{
+padding: 20px 25px;
+display: block;
+width: 30%;
+text-align: center;
+margin-left:10%;
+background-color: #f0f0f0;
+}
+
+/* Dynamic sizing for screen size */
+
+@media(max-width: 800px){
+.hideOnMobile{
+  display: none;
+}
+.hideOnWeb{
+  display: block;
+}
+}
+
+@media(min-width: 800px){
+.hideOnMobile{
+  display: block;
+}
+.hideOnWeb{
+  display: none;
+}
+.hambugers{
+  display:none;
+}
+}
+
+@media(max-width: 400px){
+.sidebar{
+  width: 100%;
+}
+}
+
+
+/** -- NAVIGATOR CSS -- **/
 ul.list {
   display: flex;
   flex-wrap: wrap; 

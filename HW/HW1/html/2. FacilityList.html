@@ -17,23 +17,36 @@ SBU-Email: semin.bae@stonybrook.edu
 
 <body>
 
-      <!-- NAVITAGOR START -->
-      <nav class = "header">
+          <!-- NAVITAGOR START -->
+    <nav class = "header">
         <ul class = "headerList">
             <li id = "Home"><a href = "1. Home.html"></a></li>
-            <li><a href = "2. FacilityList.html">Facility List</a></li>
-            <li><a href = "3. FacilityReservation.html">Facility Reservation</a></li>
-            <li class="dropdown">
+            <li class="hideOnMobile" class= 'listmiddle'><a href = "2. FacilityList.html">Facility List</a></li>
+            <li class="hideOnMobile"  class= 'listmiddle'><a href = "3. FacilityReservation.html">Facility Reservation</a></li>
+            <li class="hideOnMobile"  class= 'listmiddle' class="dropdownMobile">
                 <button onclick="dropdownFunction()" class="dropbtn">My Page</button>
                 <div id="myDropdown" class="dropdown-content">
                   <a href="4. MyInformation.html">My Information</a>
                   <a href="5. MyReservation.html">My Reservation</a>
                 </div>
-            <li>
-            <li id = "MyInfo"></li>
+            </li>
+            <li id = "MyInfo" class="hideOnMobile"></li>
+            
+            <li id="ExpandHambuger" class="hideOnWeb" onclick="toggleHamburgerMenu()"><button></button></li>
         </ul>
-    </nav>
 
+        <div id = "hambuger">
+        <temp class = "hambugers">
+        <a class = "hambugerlist" href = "2. FacilityList.html">Facility List</a>
+        <a class = "hambugerlist" href = "3. FacilityReservation.html" >Facility Reservation</a>
+        <a onclick="dropdownFunctionMobile()" class="hambugerlist" class="dropbtnMobile" id="myPage">My Page</a>
+            <div id = "myDropdownMobile" class="dropdown-content-mobile">
+                <a href="4. MyInformation.html" class="mobiledropdown">My Information</a>
+                <a href="5. MyReservation.html" class="mobiledropdown">My Reservation</a>
+            </div>
+        </temp>
+        </div>
+    </nav>
 
     <!-- NAVITAGOR END -->
      
