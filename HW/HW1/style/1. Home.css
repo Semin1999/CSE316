@@ -154,7 +154,12 @@ display: block;
 width: 30%;
 text-align: center;
 margin-left:10%;
-background-color: #f0f0f0;
+background-color: #ebebebe7;
+min-width: 160px;
+overflow: auto;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+right: 10;
+z-index: 1;
 }
 
 /* Dynamic sizing for screen size */
@@ -189,7 +194,7 @@ background-color: #f0f0f0;
 
 /* -- Main Text: Give Padding for the main text */ 
 .mainText{
-  margin-left: 250px;
+  margin-left: 10%;
 }
 
 .mainTitle{
@@ -198,13 +203,13 @@ background-color: #f0f0f0;
 }
 
 .explainTitle{
-  margin-left: 20px;
+  margin-left: 5%;
 }
 
 .explainText{
-  margin-left: 45px;
+  margin-left: 5%;
 }
 
 .extraTitle{
-  margin-left: 85px;
+  margin-left: 5%;
 }

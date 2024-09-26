@@ -149,13 +149,18 @@ background-color: #d1d1d1;
 }
 
 .mobiledropdown{
-padding: 20px 25px;
-display: block;
-width: 30%;
-text-align: center;
-margin-left:10%;
-background-color: #f0f0f0;
-}
+  padding: 20px 25px;
+  display: block;
+  width: 30%;
+  text-align: center;
+  margin-left:10%;
+  background-color: #ebebebe7;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 10;
+  z-index: 1;
+  }
 
 /* Dynamic sizing for screen size */
 
@@ -246,8 +251,8 @@ ul.list {
 
 main{
   margin: 30px;
-  margin-left: 300px;
-  margin-top: 50px;
+  margin-left: 10%;
+  margin-top: 3;
 }
 
 #dropdown{
