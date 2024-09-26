@@ -25,21 +25,44 @@ function dropdownFunction() {
         }
       
       }
+
+
     }
+
+    document.getelementby
   }
   /* -- NAVIGATOR END -- */
-
-const modal = document.querySelector('.modal');
-const modalOpen = document.querySelector('.modal_btn');
-const modalClose = document.querySelector('.close_btn');
-
-//열기 버튼을 눌렀을 때 모달팝업이 열림
-modalOpen.addEventListener('click',function(){
-  	//'on' class 추가
-    modal.classList.add('on');
-});
-//닫기 버튼을 눌렀을 때 모달팝업이 닫힘
-modalClose.addEventListener('click',function(){
-    //'on' class 제거
-    modal.classList.remove('on');
-});
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const closeButtons = document.querySelectorAll(".close_btn");
+    const saveButtons = document.querySelectorAll(".save_btn");
+    const buttonUnits = document.querySelectorAll(".buttonUnit");
+    const popups = document.querySelectorAll(".popup > div");
+  
+    function closePopup() {
+      popups.forEach(popup => {
+        popup.style.display = 'none';
+      });
+    }
+  
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', closePopup);
+    });
+  
+    saveButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        closePopup();
+        alert("Saved!");
+      });
+    });
+  
+    buttonUnits.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        const popupId = ["image_popup", "password_popup", "name_popup"][index];
+        const popup = document.getElementById(popupId);
+        if (popup) {
+          popup.style.display = 'block';
+        }
+      });
+    });
+  });

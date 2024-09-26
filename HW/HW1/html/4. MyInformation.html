@@ -42,7 +42,7 @@ SBU-Email: semin.bae@stonybrook.edu
         
         <br>
 
-        <button id = "buttonImage" class = buttonUnit>change image</button>
+        <button id = "buttonImage" class = buttonUnit>Change image</button>
         
         <br>
         
@@ -62,7 +62,7 @@ SBU-Email: semin.bae@stonybrook.edu
 
     <div class="popup">
 
-        <div class="image_popup">
+        <div class="image_popup" id = "image_popup">
             <h3 class = "popup_title">Change your image</h3>
             <hr>
             <p class = "popup_explain">New Image</p>
@@ -78,13 +78,27 @@ SBU-Email: semin.bae@stonybrook.edu
             </div>
         </div>
 
-        <div class="password_popup">
+        <div class="password_popup" id = "password_popup">
             <h3 class = "popup_title">Change your password</h3>
             <hr>
             <p class = "popup_explain">New Password</p>
             
             <input type="text" id="passwordText" placeholder = "Enter the new password"/>
 
+
+            <hr>
+            <div class="btn_footer">
+                <button type="button" class="close_btn">Close</button>
+                <button type="button" class="save_btn">Save Changes</button>
+            </div>
+        </div>
+
+        <div class="name_popup" id = "name_popup">
+            <h3 class = "popup_title">Change your name</h3>
+            <hr>
+            <p class = "popup_explain">New Name</p>
+            
+            <input type="text" id="passwordText" placeholder = "Enter the new name"/>
 
             <hr>
             <div class="btn_footer">
