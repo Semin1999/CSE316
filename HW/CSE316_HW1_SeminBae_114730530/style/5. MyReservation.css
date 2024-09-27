@@ -200,7 +200,7 @@ ul.list {
   flex-wrap: wrap; 
   list-style-type: none; 
   justify-content: left;
-  padding-left: 250px;
+  padding-left: 10%;
 }
 
 .listElement {

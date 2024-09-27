@@ -11,21 +11,20 @@ SBU-Email: semin.bae@stonybrook.edu
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment1_CSE316</title>
-    <link rel="stylesheet" href="../style/1. Home.css"> 
-    <script src="../script/1. Home.js"></script>
-
+    <link rel="stylesheet" href="../style/3. FacilityReservation.css"> 
+    <script src="../script/3. FacilityReservation.js"></script>
 </head>
 
-
 <body>
-
     <!-- NAVITAGOR START -->
     <nav class = "header">
+        <!-- basic nav bar selection to use ul and a -->
         <ul class = "headerList">
             <li id = "Home"><a href = "1. Home.html"></a></li>
             <li class="hideOnMobile" class= 'listmiddle'><a href = "2. FacilityList.html">Facility List</a></li>
             <li class="hideOnMobile"  class= 'listmiddle'><a href = "3. FacilityReservation.html">Facility Reservation</a></li>
             <li class="hideOnMobile"  class= 'listmiddle' class="dropdownMobile">
+                <!-- drop down function for My Page -->
                 <button onclick="dropdownFunction()" class="dropbtn">My Page</button>
                 <div id="myDropdown" class="dropdown-content">
                   <a href="4. MyInformation.html">My Information</a>
@@ -34,9 +33,11 @@ SBU-Email: semin.bae@stonybrook.edu
             </li>
             <li id = "MyInfo" class="hideOnMobile"></li>
             
+            <!-- That is the button to use with hambuger, so it is not visible at the first time, but screen size <= 800px -->
             <li id="ExpandHambuger" class="hideOnWeb" onclick="toggleHamburgerMenu()"><button></button></li>
         </ul>
 
+        <!-- This is the for hambuger: if hit the expandHambuger button then display:block(show), it's not visible at the first time -->
         <div id = "hambuger">
         <temp class = "hambugers">
         <a class = "hambugerlist" href = "2. FacilityList.html">Facility List</a>
@@ -52,41 +53,39 @@ SBU-Email: semin.bae@stonybrook.edu
 
     <!-- NAVITAGOR END -->
 
-    <div class = "mainText">
+     
+    <!-- Make some input module according the mock file: dropdown, date, radio(choices), textarea and button-->
+    <main>
 
-        <p class = "mainTitle">Facility Reservation App</p>
+        <select id="dropdown"></select>
+
+        <ul class="list"></ul>
+        
+        <!-- make date input with max and min dates-->
+        <h3 id="dateCover">Date to be used: <input type="date" max="2030-12-31" min="2021-01-01" id="date"></h3>
+        <!-- make the number of member, but I don't like any overflow and need to prevend any error, I get limied with 0 < x < 999. -->
+        <h3 id = "numberCover">Number of People: <input type="number" max = "999" min = 0 id = "number"></h3>
+        
+
+        <!-- Two choices to use radio, you can choose only one out of two (handle in js) -->
+        <h3>Are you affiliated with SUNY Korea?</h3>
+        <nav id = "affiliated">  
+        <input type="radio" sytle = "round" class = "circle" id = 'yes'> Yes
+        <br>
+        <input type="radio" sytle = "round" class = "circle" id = 'no'> No
+        </nav>
     
         <br>
     
-        <a>
-            <li class = "explainTitle">Facility List</li>
-            <p class = "explainText">Use this to display a list of Facilities with site informaion and pictures.</p>
-        </a>
+        <h3 id = "purposeCover">Purpose of Use:</h3>
+        <!-- Simple text area with rows and cols -->
+        <textarea rows="3" cols="30" placeholder="Please Type here..." id = "purpose"></textarea>
     
         <br>
+        <!-- Submit button -->
+        <button id = "submit">Submit</button>
+
+    </main>
     
-        <a>
-            <li class = "explainTitle">Facility Reservation</li>
-            <p class = "explainText">Use this to Reserve a facility [Application Form]</p>
-        </a>
-    
-        <br>
-    
-        <a>
-            <li class = "explainTitle">My Page</li>
-            <p class = "explainText">This holds information related to you.</p>
-        </a>
-
-        <br>
-
-        <a>
-            <ul class = extraTitle ul style="list-style-type: circle;">
-                <li><b>My information</b> - Your profile</li>
-                <li><b>Reservation History</b> - Your list of reservations</li>
-            </ul>
-        </a>
-
-    </div>
-
 </body>
 </html>

@@ -21,11 +21,13 @@ SBU-Email: semin.bae@stonybrook.edu
 
     <!-- NAVITAGOR START -->
     <nav class = "header">
+        <!-- basic nav bar selection to use ul and a -->
         <ul class = "headerList">
             <li id = "Home"><a href = "1. Home.html"></a></li>
             <li class="hideOnMobile" class= 'listmiddle'><a href = "2. FacilityList.html">Facility List</a></li>
             <li class="hideOnMobile"  class= 'listmiddle'><a href = "3. FacilityReservation.html">Facility Reservation</a></li>
             <li class="hideOnMobile"  class= 'listmiddle' class="dropdownMobile">
+                <!-- drop down function for My Page -->
                 <button onclick="dropdownFunction()" class="dropbtn">My Page</button>
                 <div id="myDropdown" class="dropdown-content">
                   <a href="4. MyInformation.html">My Information</a>
@@ -34,9 +36,11 @@ SBU-Email: semin.bae@stonybrook.edu
             </li>
             <li id = "MyInfo" class="hideOnMobile"></li>
             
+            <!-- That is the button to use with hambuger, so it is not visible at the first time, but screen size <= 800px -->
             <li id="ExpandHambuger" class="hideOnWeb" onclick="toggleHamburgerMenu()"><button></button></li>
         </ul>
 
+        <!-- This is the for hambuger: if hit the expandHambuger button then display:block(show), it's not visible at the first time -->
         <div id = "hambuger">
         <temp class = "hambugers">
         <a class = "hambugerlist" href = "2. FacilityList.html">Facility List</a>
@@ -52,6 +56,8 @@ SBU-Email: semin.bae@stonybrook.edu
 
     <!-- NAVITAGOR END -->
 
+
+    <!-- Thoe are the basic Text file from home site. Simple assign class name and information -->
     <div class = "mainText">
 
         <p class = "mainTitle">Facility Reservation App</p>
@@ -80,6 +86,7 @@ SBU-Email: semin.bae@stonybrook.edu
         <br>
 
         <a>
+            <!-- Make the circle ul to use styling in HTML. It's so basic so I implemented in HTML -->
             <ul class = extraTitle ul style="list-style-type: circle;">
                 <li><b>My information</b> - Your profile</li>
                 <li><b>Reservation History</b> - Your list of reservations</li>
